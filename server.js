@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
     })
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        pageContent: 'Portfolio content'
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'unable to handle request',
